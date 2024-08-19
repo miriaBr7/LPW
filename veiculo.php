@@ -1,3 +1,4 @@
+//veiculo.php
 <?php
     $modelo = $_POST["modelo"];
     $marca = $_POST["marca"];
@@ -46,4 +47,39 @@ echo "Marca: " . $veiculo->getMarca() . "<br>";
 echo "Combustível: " . $veiculo->getCombustivel() . "<br>";
 echo "<br><br>";
 echo "<a href='veiculo_form.php'>Cadastrar outro veículo</a>";
+
+
+///////////////////////////////////////veiculo_exec.php
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veiculo</title>
+</head>
+
+<body>
+    <h2>Dados do Veículo</h2>
+    <form method="POST" action="veiculo_exec.php">
+        <input name="modelo" placeholder="Informe o modelo" />
+        <br><br>
+        <input name="marca" placeholder="Informe a marca" />
+        <br><br>
+        <select name="combustivel">
+            <option value="">--Selecione o combustível---</option>
+            <option value="A">Álcool</option>
+            <option value="G">Gasolina</option>
+            <option value="F">Flex</option>
+        </select>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
+
+<?php
 
